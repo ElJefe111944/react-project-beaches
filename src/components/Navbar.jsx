@@ -16,7 +16,7 @@ const Navbar = () => {
     }
 
   return (
-    <div className='flex justify-between items-center h-20 px-4'>
+    <div className='flex justify-between items-center h-20 px-4 absolute z-10 text-white w-full'>
         {/*-- Logo --*/}
         <div>           
             <h1 className={logo ? 'hidden lg:block' : 'block'}>BEACHES.</h1>
@@ -36,11 +36,11 @@ const Navbar = () => {
         </div>
          {/*-- Dropdown Icon - Mobile --*/}
         <div onClick={handleNav} className='md:hidden z-10 cursor-pointer'>
-            {nav ?  <AiOutlineClose size={20} /> : <HiOutlineMenuAlt4 size={20}/>}           
+            {nav ?  <AiOutlineClose className='text-black' size={20} /> : <HiOutlineMenuAlt4 size={20}/>}           
         </div>
          {/*-- Menu - Mobile --*/}
        
-         <div className={nav ? 'absolute left-0 top-0 md:hidden w-full bg-gray-100/90 px-4 py-7 flex flex-col' : 'absolute left-[-100%] top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col'}>
+         <div className={nav ? 'absolute left-0 top-0 md:hidden w-full bg-gray-100/90 text-black px-4 py-7 flex flex-col' : 'absolute left-[-100%] top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col'}>
          <ul>
             <h1>BEACHES.</h1>
             <li className='border-b'>Home</li>
